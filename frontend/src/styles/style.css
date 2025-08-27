@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+@theme{
+    /* === Brand Colors === */
+    --color-primary: #002623;   /* Deep dark green */
+    --color-secondary: #054239; /* Lighter green shade */
+    --color-accent: #C7B08A;    /* Sand / gold-beige accent */
+    --color-body: #EDEBE0;      /* Body background */
+    --color-light: #FFFFFF;     /* White */
+    --color-dark: #111111;      /* Black / dark text */
+
+    /* Fonts */
+    --font-sans: "Inter", sans-serif;    /* Body font */
+    --font-title: "Poppins", sans-serif; /* Headings */
+}
+
+body{
+    @apply bg-body text-dark font-sans;
+}
+
+h1, h2, h3, h4, h5, h6{
+    @apply font-title text-primary;
+}
+
