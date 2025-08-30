@@ -5,8 +5,8 @@ const Navbar = () => {
     const [open, setopen] = useState(false);
 
   return (
-      <header className="bg-primary w-full h-[90px] fixed">
-          <nav className="max-w-[1500px] mx-auto px-10 h-full flex items-center justify-between">
+      <header className="bg-primary w-full h-[90px] fixed ">
+          <nav className="max-w-[1500px] mx-auto px-10 h-full flex items-center justify-between border-b border-white/20 shadow-2xl">
               <a href="#hero">
                   <img src={Logo} alt=""/>
               </a>
@@ -36,6 +36,17 @@ const Navbar = () => {
 
               </button>
           </nav>
+          <div
+              className={`md:hidden w-full h-full fixed top[90px] right-0 transform transition-transform bg-primary text-white  duration-300 ${
+                  open ? "translate-x-0" : "translate-x-full"
+              }`}
+          >
+            <ul>
+                <li>About</li>
+                <li>Projects</li>
+                <li>Contact</li>
+            </ul>
+          </div>
     </header>
   );
 };
