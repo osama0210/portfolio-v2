@@ -37,15 +37,24 @@ const Navbar = () => {
               </button>
           </nav>
           <div
-              className={`md:hidden w-full h-full fixed top[90px] right-0 transform transition-transform bg-primary text-white  duration-300 ${
+              className={`md:hidden w-full inset-0 fixed top-[90px] right-0 transform transition-transform bg-primary text-white  duration-300 ${
                   open ? "translate-x-0" : "translate-x-full"
               }`}
           >
-            <ul>
-                <li>About</li>
-                <li>Projects</li>
-                <li>Contact</li>
-            </ul>
+              <ul className="h-full flex flex-col justify-between p-10 text-2xl">
+                  <div className="flex flex-col gap-5">
+                      <li><a href="#about" className="hover:text-accent tran">About</a></li>
+                      <li><a href="#projects" className="hover:text-accent transition">Projects</a></li>
+                      <li><a href="#contact" className="hover:text-accent transition">Contact</a></li>
+                  </div>
+
+                  <li className="border-t border-white/30 pt-6 mt-4">
+                      <a href="/cv.pdf" className="hover:text-accent transition text-white font-medium">
+                          Download CV
+                      </a>
+                  </li>
+              </ul>
+
           </div>
     </header>
   );
