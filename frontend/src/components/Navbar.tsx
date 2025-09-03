@@ -7,7 +7,7 @@ const Navbar = () => {
   const [open, setopen] = useState(false);
 
   return (
-    <header className="bg-primary w-full h-[90px] fixed ">
+    <header className="bg-primary w-full h-[90px] fixed top-0 left-0 right-0 z-[9999]">
       <nav className="max-w-[1500px] mx-auto px-10 h-full flex items-center justify-between border-b border-white/20 shadow-2xl">
         <a href="#hero" onClick={() => setopen(false)}>
           <img src={Logo} alt="O logo" />
@@ -38,6 +38,7 @@ const Navbar = () => {
           Download CV
         </a>
 
+
         <button
           aria-label="Toggle menu"
           onClick={() => setopen((o) => !o)}
@@ -51,7 +52,7 @@ const Navbar = () => {
         </button>
       </nav>
       <div
-        className={`md:hidden w-full inset-0 fixed top-[90px] right-0 transform transition-transform bg-primary text-white  duration-300 ${
+        className={`fixed md:hidden w-full inset-0 top-[90px] right-0 transform transition-transform bg-primary text-white  duration-300 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
